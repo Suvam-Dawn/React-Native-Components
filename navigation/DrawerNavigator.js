@@ -10,11 +10,9 @@ import {
 import {
   createAppContainer,
   createDrawerNavigator,
-  DrawerItems,
-  NavigationActions,
-  createMaterialTopTabNavigator,
-  StackRouter
+  DrawerItems
 } from "react-navigation";
+import { Icon } from "react-native-elements";
 import color from "../constants/Colors";
 import HomeScreen from "../Screen/HomeScreen";
 
@@ -94,7 +92,17 @@ const CustomDrawerComponent = props => {
 const DrawerNavigator = createDrawerNavigator(
   {
     Home: {
-      screen: HomeScreen
+      screen: HomeScreen,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Icon
+            name="home"
+            size={20}
+            reverseColor="transparent"
+            color={color.primaryColor}
+          />
+        )
+      }
     }
   },
   {

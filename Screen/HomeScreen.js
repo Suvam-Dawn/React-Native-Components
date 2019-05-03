@@ -17,11 +17,9 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <DrawerHeader
-          navigation={this.props.navigation}
-          title="Home"
-        />
+        <DrawerHeader navigation={this.props.navigation} title="Home" />
         <ImageBackground
+          imageStyle={{ opacity: 0.1 }}
           source={require("../Public/image/react-native.png")}
           style={{ flex: 1 }}
           resizeMode="stretch"
